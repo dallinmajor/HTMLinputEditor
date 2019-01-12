@@ -9,9 +9,33 @@ class Gazoo extends Component {
         }
     }
 
-    handleInputChange = () => {
+    handleCharater = (char) => {
+        
+    }
 
-    };
+    handleEnter = () => {
+
+    }
+
+    handleBackspace = () => {
+
+    }
+
+    HTMLeditorListener = (event) => {
+        console.log(event);
+        event.preventDefault();
+       
+        switch(event.key) {
+            case 'Enter':
+                this.handleEnter();
+            break;
+            case 'Backspace': 
+                this.handleBackspace();
+            break;
+            default:
+                this.handleCharater(event.key)
+        }
+    }
 
     handleSubmit = () => {
 
@@ -21,8 +45,8 @@ class Gazoo extends Component {
         return (
             <div>
                 <div className="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1">Text Area</label>
+                    <textarea className="form-control" onKeyDown={this.HTMLeditorListener} id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
             </div>
         )
