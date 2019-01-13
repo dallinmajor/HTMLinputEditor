@@ -10,6 +10,8 @@ class Gazoo extends Component {
     }
 
     handleCharater = (char) => {
+        console.log(char)
+        if (char === '>' || char === '<') {alert('Sorry but that character is not allowed')};
         
     }
 
