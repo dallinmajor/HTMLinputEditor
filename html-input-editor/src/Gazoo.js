@@ -12,11 +12,24 @@ class Gazoo extends Component {
     handleCharater = (char) => {
         console.log(char)
         if (char === '>' || char === '<') {alert('Sorry but that character is not allowed')};
-        
+
+    }
+
+    addBreakTag() {
+        this.setState({
+            htmlVal: this.state.htmlVal.splice(this.state.htmlVal.length - 5, 0, '<br/>')
+        });
+    }
+
+    addPtag() {
+        this.setState({
+            htmlVal: this.state.htmlVal + '</p><p>'
+        }) 
     }
 
     handleEnter = () => {
-
+        let endCharater = this.state.htmlVal.charAt(this.state.htmlVal.length - 1);
+        this.state.htmlVal.charAt(endCharater) === '>' ? this.addBreakTag() : this.addPtag();
     }
 
     handleBackspace = () => {
