@@ -9,11 +9,15 @@ class Gazoo extends Component {
         }
     }
 
+    sanatizeInput = (input) => {
+        return input.replace(/<.*?script|style=|class=/g, '');
+    }
+
     handleOnChange = (e) => {
-        console.log(this.state.inputVal.split(''));
+        let input = this.sanatizeInput(e.target.value);
         this.setState({
-            inputVal: e.target.value,
-            htmlVal: '<p>' + e.target.value.replace(/(?:\r\n|\r|\n)/g, '<br/>') + '</p>'
+            inputVal: input,
+            htmlVal: '<p>' + input.replace(/(?:\r\n|\r|\n)/g, '<br/>') + '</p>'
         });
     }
 
