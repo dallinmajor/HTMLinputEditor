@@ -33,6 +33,7 @@ class Gazoo extends Component {
                     <textarea className="form-control" value={this.state.inputVal} onChange={this.handleOnChange} id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
                 <div dangerouslySetInnerHTML={this.createMarkUp()}/>
+                <div>{this.state.htmlVal}</div>
             </div>
         )
     };
