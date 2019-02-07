@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/HTMLinputEditor/precache-manifest.3929dd3ed229d54adf0d1358a983c584.js"
+  "/HTMLinputEditor/,/precache-manifest.5c852fefb81197b6021be22965c8ff4d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/HTMLinputEditor/index.html", {
+workbox.routing.registerNavigationRoute("/HTMLinputEditor/,/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
