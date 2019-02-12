@@ -8,8 +8,8 @@ class App extends Component {
       <div className="container">
         <div className="jumbotron">
           <div className="container">
-            <h1 className="display-4">Gazoo</h1>
-            <p className="lead">An Html Editor React Component</p>
+            <h1 className="display-4">HTML input editor</h1>
+            <p className="lead">Store line breaks in your database as html.</p>
           </div>
         </div>
         <Gazoo />
