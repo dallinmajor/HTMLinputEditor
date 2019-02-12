@@ -8,7 +8,7 @@ class App extends Component {
       <div className="container">
         <div className="jumbotron">
           <div className="container">
-            <h1 className="display-4">HTML input editor</h1>
+            <h1 className="display-4">HTML editor + sanitizer</h1>
             <p className="lead">Store line breaks in your database.</p>
           </div>
         </div>
