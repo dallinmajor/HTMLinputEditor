@@ -9,7 +9,7 @@ class App extends Component {
         <div className="jumbotron">
           <div className="container">
             <h1 className="display-4">HTML input editor</h1>
-            <p className="lead">Store line breaks in your database as html.</p>
+            <p className="lead">Store line breaks in your database.</p>
           </div>
         </div>
         <Gazoo />
